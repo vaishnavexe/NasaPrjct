@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { type PropsWithChildren } from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+import index from './index';
+import CDetails from './CDetails';
+import { NavigationContainer } from '@react-navigation/native';
+import Random from './Random';
 
-export default function App() {
+
+const NasaApp = () => {
+  const Stack = createStackNavigator();
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='index'>
+        <Stack.Screen name=" " component={index} />
+        <Stack.Screen name="CDetails" component={CDetails} />
+        <Stack.Screen name="Random" component={Random} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  );
+};
+export default NasaApp;
