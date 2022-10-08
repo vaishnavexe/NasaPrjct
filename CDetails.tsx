@@ -26,7 +26,7 @@ const CDetails = ({ route, navigation }: any) => {
         <Text style={{fontSize:20,padding:15,marginTop:20}}>id : {cDetail?.id}</Text>
         <Text style={{fontSize:20,padding:15}}>name : {cDetail?.name}</Text>
         <Text style={{fontSize:20,padding:15}}>nasa_jpl_url : {cDetail?.nasa_jpl_url}</Text>
-        <Text style={{fontSize:20,padding:15}}>is_potentially_hazardous_asteroid : {cDetail?.is_potentially_hazardous_asteroid}</Text>
+        <Text style={{fontSize:20,padding:15}}>is_potentially_hazardous_asteroid : {cDetail?.is_potentially_hazardous_asteroid.toString()}</Text>
     </SafeAreaView>
     );
 };
